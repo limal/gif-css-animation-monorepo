@@ -9,6 +9,13 @@ body {
 
 .stage {
   position: relative;
+  transform: none;
+}
+
+@media (min-device-width: 1280px) {
+  .stage {
+    transform: scale(1.8);
+  }
 }
 
 .background {
