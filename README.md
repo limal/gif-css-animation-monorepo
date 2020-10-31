@@ -4,7 +4,7 @@ A repository of a web page I created to make below animation for my article:
 
 [Simplify your monorepo with npm 7 workspaces](https://dev.to/limal/simplify-your-monorepo-with-npm-7-workspaces-5gmj).
 
-![Hot reloading for UI React component](https://dev-to-uploads.s3.amazonaws.com/i/ysx7ck7lj1qh0bnxzmi2.gif)
+![Hot reloading for UI React component](https://dev-to-uploads.s3.amazonaws.com/i/52bowb84cy732teck6ky.gif)
 
 Who needs Adobe Effects anyway?
 
