@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Monorepo - CSS animation</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="stage">
+        <img src="./images/framework-1.png" class="background" />
+        <img src="./images/framework-2.png" class="background frame-2" />
+        <img src="./images/framework-3.png" class="background frame-3" />
+        <img src="./images/framework-4.png" class="background frame-4" />
+        <img src="./images/editing-code.gif" class="editing-code" />
+        <div class="blink-output"></div>
+        <div class="blink-app-1"></div>
+        <div class="blink-app-2"></div>
+        <div class="webpack-wrapper">
+          <img src="./images/webpack.png" class="webpack-logo" />
+          <img src="./images/gear.png" class="gear rotating" />
+        </div>
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const getElement = (className) => document.querySelector(`.${className}`);
+
+    const keyframe = (time, className, newClassName) =>
+      setTimeout(() => {
+        const el = getElement(className);
+        el.className = `${el.className} ${newClassName}`;
+      }, time);
+
+    keyframe(8500, "webpack-wrapper", "show");
+    keyframe(10500, "webpack-wrapper", "hide");
+    keyframe(10500, "frame-2", "show");
+    keyframe(10500, "blink-output", "display blinking");
+    keyframe(12500, "frame-3", "show");
+    keyframe(12500, "blink-app-1", "display blinking");
+    keyframe(13000, "frame-4", "show");
+    keyframe(13000, "blink-app-2", "display blinking");
+
+    let seconds = -1;
+
+    setInterval(() => {
+      seconds++;
+      getElement("progress-bar").setAttribute(
+        "style",
+        `width: ${seconds * 35}px`
+      );
+    }, 1000);
+  </script>
+</html>

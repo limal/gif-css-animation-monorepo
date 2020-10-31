@@ -1,0 +1,160 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  margin: 100px auto;
+  width: 720px;
+}
+
+.stage {
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  width: 600px;
+  height: auto;
+}
+
+.frame-2 {
+  opacity: 0;
+  transform: 1s;
+  z-index: 2;
+}
+
+.frame-3 {
+  opacity: 0;
+  transform: 1s;
+  z-index: 3;
+}
+
+.frame-4 {
+  opacity: 0;
+  transform: 1s;
+  z-index: 4;
+}
+
+.editing-code {
+  position: absolute;
+  width: 261px;
+  height: auto;
+  top: 40px;
+  left: 1px;
+  z-index: 100;
+}
+
+.webpack-wrapper {
+  position: absolute;
+  opacity: 0;
+  transition: 1s;
+}
+
+.webpack-logo {
+  position: absolute;
+  width: 160px;
+  height: auto;
+  top: 158px;
+  left: 1px;
+  z-index: 101;
+}
+
+.gear {
+  position: absolute;
+  width: 32px;
+  height: auto;
+  top: 174px;
+  left: 12px;
+  z-index: 102;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.display {
+  display: inline-block !important;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: rotating 2s linear infinite;
+}
+
+.blinking {
+  animation: blinking 3s linear forwards;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.blink-output {
+  display: none;
+  position: absolute;
+  width: 160px;
+  height: 30px;
+  background: rgba(255, 192, 32, 0.33);
+  z-index: 200;
+  top: 325px;
+  left: 86px;
+}
+
+.blink-app-1 {
+  display: none;
+  position: absolute;
+  width: 172px;
+  height: 97px;
+  background: rgba(255, 192, 32, 0.33);
+  z-index: 201;
+  top: 171px;
+  left: 382px;
+}
+
+.blink-app-2 {
+  display: none;
+  position: absolute;
+  width: 172px;
+  height: 97px;
+  background: rgba(255, 192, 32, 0.33);
+  z-index: 202;
+  top: 280px;
+  left: 382px;
+}
+
+.progress-bar {
+  position: absolute;
+  display: inline-block;
+  max-width: 640px;
+  height: 2px;
+  top: 390px;
+  z-index: 1000;
+  transition: width 1s;
+  background: rgba(60, 64, 54, 0.33);
+}
